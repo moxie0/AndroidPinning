@@ -1,0 +1,71 @@
+<api>
+<package name="org.thoughtcrime.ssl.pinning"
+>
+<class name="PinningTrustManager"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="PinningTrustManager"
+ type="org.thoughtcrime.ssl.pinning.PinningTrustManager"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="pins" type="java.lang.String[]">
+</parameter>
+<exception name="CertificateException" type="java.security.cert.CertificateException">
+</exception>
+</constructor>
+<method name="checkClientTrusted"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="chain" type="java.security.cert.X509Certificate[]">
+</parameter>
+<parameter name="authType" type="java.lang.String">
+</parameter>
+<exception name="CertificateException" type="java.security.cert.CertificateException">
+</exception>
+</method>
+<method name="checkServerTrusted"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="chain" type="java.security.cert.X509Certificate[]">
+</parameter>
+<parameter name="authType" type="java.lang.String">
+</parameter>
+<exception name="CertificateException" type="java.security.cert.CertificateException">
+</exception>
+</method>
+<method name="getAcceptedIssuers"
+ return="java.security.cert.X509Certificate[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+</package>
+</api>
