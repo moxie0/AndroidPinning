@@ -59,7 +59,7 @@ HttpResponse response = httpClient.execute(new HttpGet("https://www.google.com/"
 It's also possible to work with `PinningTrustManager` and `PinningSSLSocketFactory` more directly:
 
 ```java
-String[] pins                = new String[] {"40c5401d6f8cbaf08b00edefb1ee87d005b3b9cd"};
+String[] pins                 = new String[] {"40c5401d6f8cbaf08b00edefb1ee87d005b3b9cd"};
 SchemeRegistry schemeRegistry = new SchemeRegistry();
 schemeRegistry.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
 schemeRegistry.register(new Scheme("https", new PinningSSLSocketFactory(getContext() ,pins, 0), 443));
