@@ -34,7 +34,8 @@ Examples
 
 Using a simple `HttpsURLConnection` with a `PinningTrustManager`:
 
-```// Define an array of pins.  One of these must be present
+```java
+// Define an array of pins.  One of these must be present
 // in the certificate chain you receive.  A pin is a hex-encoded
 // hash of a X.509 certificate's SubjectPublicKeyInfo. A pin can
 // be generated using the provided pin.py script:
@@ -48,7 +49,8 @@ return connection.getInputStream();
 
 Using a simple ``HttpClient` with a `PinningTrustManager`:
 
-```String[] pins         = new String[] {"f30012bbc18c231ac1a44b788e410ce754182513"};
+```java
+String[] pins         = new String[] {"f30012bbc18c231ac1a44b788e410ce754182513"};
 HttpClient httpClient = PinningHelper.getPinnedHttpClient(context, pins);
 
 HttpResponse response = httpClient.execute(new HttpGet("https://www.google.com/"));
@@ -56,7 +58,8 @@ HttpResponse response = httpClient.execute(new HttpGet("https://www.google.com/"
 
 It's also possible to work with `PinningTrustManager` and `PinningSSLSocketFactory` more directly:
 
-```String[] pins                = new String[] {"40c5401d6f8cbaf08b00edefb1ee87d005b3b9cd"};
+```java
+String[] pins                = new String[] {"40c5401d6f8cbaf08b00edefb1ee87d005b3b9cd"};
 SchemeRegistry schemeRegistry = new SchemeRegistry();
 schemeRegistry.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
 schemeRegistry.register(new Scheme("https", new PinningSSLSocketFactory(getContext() ,pins, 0), 443));
