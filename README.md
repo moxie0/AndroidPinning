@@ -47,7 +47,7 @@ HttpsURLConnection connection = PinningHelper.getPinnedHttpsURLConnection(contex
 return connection.getInputStream();
 ```
 
-Using a simple ``HttpClient` with a `PinningTrustManager`:
+Using a simple `HttpClient` with a `PinningTrustManager`:
 
 ```java
 String[] pins         = new String[] {"f30012bbc18c231ac1a44b788e410ce754182513"};
