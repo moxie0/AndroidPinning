@@ -1,7 +1,7 @@
 Android Pinning
 =================
 
-libpinning is a standalone Android library project that facilitates certificate pinning for SSL
+AndroidPinning is a standalone Android library project that facilitates certificate pinning for SSL
 connections from Android apps, in order to minimize dependence on Certificate Authorities.
 
 CA signatures are necessary for *general purpose* network communication tools: things like web
@@ -28,6 +28,17 @@ many Comodo breaches, the DigiNotar breach, and the TurkTrust breach.
 
 This library is designed to make pinning easier on Android.  It's structured as an Android library
 project, so you can simply link it to your own project and begin.
+
+Using AndroidPinning
+-----------
+
+If you're using gradle to build your project, you can include the AndroidPinning artifact by
+adding a dependency:
+
+```dependencies {
+       compile 'org.thoughtcrime.ssl.pinning:AndroidPinning:1.0.0'
+   }
+```
 
 Examples
 -----------
