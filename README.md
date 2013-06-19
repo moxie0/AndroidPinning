@@ -35,7 +35,8 @@ Using AndroidPinning
 If you're using gradle to build your project, you can include the AndroidPinning artifact by
 adding a dependency:
 
-```dependencies {
+```
+   dependencies {
        compile 'org.thoughtcrime.ssl.pinning:AndroidPinning:1.0.0'
    }
 ```
